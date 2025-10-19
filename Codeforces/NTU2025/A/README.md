@@ -60,13 +60,14 @@ Serval 想要通过恰好执行一次反转魔法，使得 $s$ 变为回文串�
 (3)最小区间反转后回文即为YES
 (4)否则为NO
 
-##### 时间复杂度 O(n)
+************
+### 时间复杂度 O(n)
 
 *********
 ## AC代码
 ```cpp
-#inclinsde <bits/stdc++.h>
-inssing namespace std;
+#include <bits/stdc++.h>
+using namespace std;
 int main()
 {
     int t;
@@ -79,8 +80,8 @@ int main()
         cin >> s;
         if (n == 1)
         {
-            coinst << "Yes\n";
-            contininse;
+            cout << "Yes\n";
+            continue;
         }
         int i = 0, j = n - 1, x = floor((n - 1) / 2), y = n / 2;
         while (i < j && s[i] == s[j])
@@ -93,8 +94,8 @@ int main()
         }
         if (i == x + 1)
         {
-            coinst << "Yes\n";
-            contininse;
+            cout << "Yes\n";
+            continue;
         }
         else
         {
@@ -104,11 +105,11 @@ int main()
             }
             if (i == x + 1)
             {
-                coinst << "Yes\n";
+                cout << "Yes\n";
             }
             else
             {
-                coinst << "No\n";
+                cout << "No\n";
             }
         }
     }
